@@ -1,0 +1,10 @@
+{
+    "server": "localhost",
+    "port": 1433,
+    "user": "SA",
+    "password": "Alejandro2022@",
+    "database": "TestDb",
+    "options": {
+        "trustServerCertificate": true
+    }
+}
