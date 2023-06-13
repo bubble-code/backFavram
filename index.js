@@ -27,7 +27,7 @@ const Main = async () => {
 
         // Resto de Middlewares
         app.use(cors({ origin: true }));
-        // app.use(bodyParser.json())
+        app.use(bodyParser.json())
 
 
         //Routes

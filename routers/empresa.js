@@ -15,9 +15,21 @@ routeEmpresa.get('/', async (req, res) => {
     }
 })
 
-routeEmpresa.post('/:data', async (req, res) => {
-    console.log(req.params.data)
-    res.status(200).send(req.params.data)
+routeEmpresa.post('/', async (req, res) => {
+    console.log(req.body)
+    console.log(req.body)
+    res.status(200).send('bien')
+})
+
+routeEmpresa.get('/parametros', async (req, res) => {
+    const conectionSQL = req.conexionSQL;
+    try {
+        const response = await conectionSQL.query('SELECT * from vfrmMntoParametro');
+        console.log(response)
+        res.status(200).send(response.recordset)
+    } catch (error) {
+        res.status(500)
+    }
 })
 
 module.exports = routeEmpresa
