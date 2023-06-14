@@ -23,9 +23,20 @@ routeEmpresa.post('/', async (req, res) => {
 
 routeEmpresa.get('/parametros', async (req, res) => {
     const conectionSQL = req.conexionSQL;
+    console.log("recibiendo llamada");
     try {
         const response = await conectionSQL.query('SELECT * from vfrmMntoParametro');
-        console.log(response)
+        // const orderedParam = response.recordset.reduce((acc, curr) => {
+        //     const id = curr.TipoParametro
+        //     if (acc[id]) {
+        //         acc[id].push(curr)
+        //     } else {
+        //         acc[id] = []
+        //         acc[id].push(curr)
+        //     }
+        //     return acc
+        // }, {})
+        // console.log(orderedParam)
         res.status(200).send(response.recordset)
     } catch (error) {
         res.status(500)

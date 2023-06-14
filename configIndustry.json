@@ -1,0 +1,10 @@
+{
+    "server": "10.0.0.209",
+    "port": 1433,
+    "user": "sa",
+    "password": "71zl6p9h",
+    "database": "IPFavram",
+    "options": {
+        "trustServerCertificate": true
+    }
+}
