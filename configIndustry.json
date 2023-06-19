@@ -1,9 +1,9 @@
 {
-    "server": "10.0.0.209",
+    "server": "localhost",
     "port": 1433,
-    "user": "sa",
-    "password": "71zl6p9h",
-    "database": "IPFavram",
+    "user": "SA",
+    "password": "Alejandro2022@",
+    "database": "industry",
     "options": {
         "trustServerCertificate": true
     }
